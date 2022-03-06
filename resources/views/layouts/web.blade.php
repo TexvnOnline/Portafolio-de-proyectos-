@@ -145,8 +145,8 @@
 	    <div class="row">
 	      <div class="col-md-12 text-center">
 	        <div class="copyright-info">
-	          &copiar; Derechos de autor 2020 LaNube. <span>Diseñado por <a
-	              href="{{$contact->link}}">LaNube</a></span>
+	          &copiar; Derechos de autor 2022 Texvn Online. <span>Desarrollado por <a href="https://texvn.online/" target="_blank">Texvn Online</a></span>
+			  {{--  <a href="{{$contact->link}}">Texvn Online</a></span>  --}}
 	        </div>
 	      </div>
 	    </div>

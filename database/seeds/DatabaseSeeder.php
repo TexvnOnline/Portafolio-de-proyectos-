@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         
         factory(App\Slider::class, 3)->create()->each(function ($slider) {
             $slider->image()->save(factory(App\Image::class)->make([
-                'url' => 'https://lorempixel.com/1600/800/'
+                'url' => '/imagenes/bg3.jpg'
             ]));
         });
 
