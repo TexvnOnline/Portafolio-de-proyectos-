@@ -9,13 +9,7 @@ use App\Http\Requests\SocialUpdateRequest;
  
 class SocialController extends Controller
 { 
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('can:socials.create')->only(['create','store']);
-        $this->middleware('can:socials.edit')->only(['edit','update']);
-        $this->middleware('can:socials.destroy')->only(['destroy']);
-    }
+
     public function create()
     {
         return view('admin.social.create');

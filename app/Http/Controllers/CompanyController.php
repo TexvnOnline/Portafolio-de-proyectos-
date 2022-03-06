@@ -8,11 +8,7 @@ use App\Http\Requests\CompanyUpdateRequest;
  
 class CompanyController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('can:companies.edit')->only(['edit','update']);
-    }
+   
     public function edit($id)
     {
         $company = Company::find($id);

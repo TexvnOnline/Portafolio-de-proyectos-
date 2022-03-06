@@ -10,12 +10,7 @@ use App\Http\Requests\SliderUpdateRequest;
  
 class SliderController extends Controller
 { 
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('can:sliders.edit')->only(['edit','update']);
-    }
-    
+
     public function edit($id)
     {
         $slider = Slider::with('image')->where('id',$id)->firstOrFail();

@@ -9,15 +9,7 @@ use App\Http\Requests\TagUpdateRequest;
 
 class TagController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('can:tags.create')->only(['create','store']);
-        $this->middleware('can:tags.index')->only(['index']);
-        $this->middleware('can:tags.edit')->only(['edit','update']);
-        $this->middleware('can:tags.show')->only(['show']);
-        $this->middleware('can:tags.destroy')->only(['destroy']);
-    }
+
     public function index()
     {
         $tags = Tag::orderBy('id','DESC')->paginate(20);

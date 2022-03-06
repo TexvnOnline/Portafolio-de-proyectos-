@@ -10,15 +10,7 @@ use App\Http\Requests\ServiceUpdateRequest;
 
 class ServiceController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('can:services.create')->only(['create','store']);
-        $this->middleware('can:services.index')->only(['index']);
-        $this->middleware('can:services.edit')->only(['edit','update']);
-        $this->middleware('can:services.show')->only(['show']);
-        $this->middleware('can:services.destroy')->only(['destroy']);
-    }
+
     public function index()
     {
         $services = Service::orderBy('id','DESC')->paginate(20);

@@ -8,11 +8,7 @@ use App\Http\Requests\ContactUpdateRequest;
  
 class ContactController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('can:contacts.edit')->only(['edit','update']);
-    }
+    
     public function edit($id)
     {
         $contact = Contact::find($id);

@@ -13,15 +13,6 @@ use App\Http\Requests\PortfolioUpdateRequest;
 class PortfolioController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('can:portfolios.create')->only(['create','store']);
-        $this->middleware('can:portfolios.index')->only(['index']);
-        $this->middleware('can:portfolios.edit')->only(['edit','update']);
-        $this->middleware('can:portfolios.show')->only(['show']);
-        $this->middleware('can:portfolios.destroy')->only(['destroy']);
-    }
     public function index()
     {
         $portfolios = Portfolio::orderBy('id','DESC')->paginate(20);

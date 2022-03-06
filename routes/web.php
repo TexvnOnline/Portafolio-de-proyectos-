@@ -1,17 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-
 Route::get('/admin', function () {
     return view('admin.index');
 });
@@ -30,7 +18,7 @@ Route::resource('/admin/tags', 'TagController')->names('tags');
 Route::resource('/admin/categories', 'CategoryController')->names('categories');
 Route::resource('/admin/portfolios', 'PortfolioController')->names('portfolios');
 Route::resource('/admin/services', 'ServiceController')->names('services');
-Route::resource('/admin/roles', 'RoleController')->names('roles');
+// Route::resource('/admin/roles', 'RoleController')->names('roles');
 Route::resource('/admin/users', 'UserController')->names('users');
 
 Route::get('/admin', 'DashboardController@index')->name('dashboard');
